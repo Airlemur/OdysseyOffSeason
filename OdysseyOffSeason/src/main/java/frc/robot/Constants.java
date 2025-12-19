@@ -73,19 +73,19 @@ public final class Constants {
 
   public static final class Module_Constants{
     //swerve modelin mekanik kısmındaki sabit değerler içiin
-    public static final int Driving_Motor_PinionTeeth = 67;
+    public static final int Driving_Motor_PinionTeeth = 14;
     //motor çark uç sayıları
 
     public static final double Driving_Motor_FreeSpeedRPS = NeoMotor_Constants.Free_Speed_RPM / 60;
     //motorun serbestken döndüğü sayı
 
-    public static final double Wheel_Diameter_Metres = 67.67;
+    public static final double Wheel_Diameter_Metres = 0.1016;
     // teker genişliği 
 
     public static final double Wheel_Circumference_Metres = Wheel_Diameter_Metres * Math.PI;
     //teker çapı yine hangi cins acaba 
 
-  public static final double Driving_Motor_Reduction = (45.0 * 22) / (Driving_Motor_PinionTeeth * 15);
+  public static final double Driving_Motor_Reduction = 8.14;
   public static final double Driving_Wheel_SpeedFreeRPS = (Driving_Motor_FreeSpeedRPS * Wheel_Circumference_Metres) / Driving_Motor_Reduction;
   }
 
@@ -105,9 +105,9 @@ public final class Constants {
     //dönerek uçmasın diye
     public static final double Max_Angular_Speed_Radians_Per_Second_Squared = Math.PI;
 
-    public static final double PX_Controller = 67.67;
-    public static final double PY_Controller = 67.67;
-    public static final double P_ThetaController = 67.67;
+    public static final double PX_Controller = 1;
+    public static final double PY_Controller = 1;
+    public static final double P_ThetaController = 1;
     //controller için x y değerleri
 
     public static final TrapezoidProfile.Constraints kThetaControllerConstraints = new TrapezoidProfile.Constraints(Max_Angular_Speed_Radians_Per_Second, Max_Angular_Speed_Radians_Per_Second_Squared);
